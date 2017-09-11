@@ -1,3 +1,5 @@
 .idea/
+media/
 *.sqlite3
+*.pyc
 tags
