@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
     Dev Blog | About
 {% endblock %}
+
+{% block heading_img %}{% static 'img/about-bg.jpg' %}{% endblock %}
 
 {% block heading %}
     <div class="page-heading">

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Dev Blog | {{ post.title }}
+{% endblock %}
+
+{% block heading_img %}{% if post.image %}{{ post.image.url }}{% endif %}{% endblock %}
+
+{% block heading %}
+    <div class="post-heading">
+        <h1>{{ post.title }}</h1>
+        <h2 class="subheading">{{ post.sub_title }}</h2>
+        <span class="meta">Posted by
+                <a href="#">{{ post.author }}</a>
+                on {{ post.date_published }}</span>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    {{ post.content|safe }}
+                </div>
+            </div>
+        </div>
+    </article>
+{% endblock %}

@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
     Dev Block | Home
 {% endblock %}
+
+{% block heading_img %}{% static 'img/home-bg.jpg' %}{% endblock %}
 
 {% block heading %}
     <div class="site-heading">
@@ -17,7 +20,7 @@
             <div class="col-lg-8 col-md-10 mx-auto">
                 {% for post in post_list %}
                     <div class="post-preview">
-                        <a href="post.html">
+                        <a href="{% url 'posts:detail' post.slug %}">
                             <h2 class="post-title">
                                 {{ post.title }}
                             </h2>
