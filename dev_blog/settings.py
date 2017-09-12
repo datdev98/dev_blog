@@ -25,7 +25,7 @@ SECRET_KEY = 'y2nyd39k(@k^33@n=f3f##rfs%pn+c8g+j$d%w2t!zq&qpt4#$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://ipy.pythonanywhere.com/']
 
 
 # Application definition
